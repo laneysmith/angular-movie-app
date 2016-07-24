@@ -3,6 +3,8 @@
     <th>Results</th>
   </tr>
   <tr ng-repeat="movie in list">
-    <td><img src="{{movie.Poster}}" class="poster"> {{movie.Title}} ({{movie.Year}})</td>
+    <td><img src="{{movie.Poster}}" class="poster">
+      <a ui-sref="detail({ movieId: movie.imdbID })">Id # {{movie.imdbID}}</a>
+{{movie.Title}} ({{movie.Year}})</td>
   </tr>
 </table>

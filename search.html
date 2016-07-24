@@ -1,20 +1,17 @@
 <div class="jumbotron text-center">
-    <h1>Movie Search</h1>
-    <p></p>
-
+    <h3>Movie Search</h3>
     <div class="row">
       <div class="col-lg-6 col-lg-offset-3">
         <div class="input-group">
-          <form ng-submit="searchMovies()">
-            <input type="text" ng-model="searchTerm" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="submit">Go!</button>
-            </span>
-          </form>
+          <!-- <form name="searchForm" ng-submit="searchMovies()"> -->
+            <input type="text" ng-model="searchTerm" class="form-control" placeholder="Search for..."><span class="input-group-btn"><button class="btn btn-default" type="submit" ng-click="searchMovies()">Go!</button></span>
+          <!-- </form> -->
         </div>
       </div>
+
     </div>
 
 </div>
+<a ui-sref=".results" class="btn btn-primary">show results</a>
 
-<div ui-view="results" ng-show="showResults"></div>
+<div ui-view></div>
